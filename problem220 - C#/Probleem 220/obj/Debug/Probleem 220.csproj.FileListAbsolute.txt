@@ -1,0 +1,8 @@
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\bin\Debug\Probleem 220.exe
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\bin\Debug\Probleem 220.pdb
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\Probleem_220.Form1.resources
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\Probleem_220.Properties.Resources.resources
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\Probleem 220.csproj.GenerateResource.Cache
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\Probleem 220.exe
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 220\Probleem 220\obj\Debug\Probleem 220.pdb

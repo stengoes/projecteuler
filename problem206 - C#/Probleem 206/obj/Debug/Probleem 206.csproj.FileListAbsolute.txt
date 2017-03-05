@@ -1,0 +1,5 @@
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 206\C#\Probleem 206\Probleem 206\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 206\C#\Probleem 206\Probleem 206\bin\Debug\Probleem 206.exe
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 206\C#\Probleem 206\Probleem 206\bin\Debug\Probleem 206.pdb
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 206\C#\Probleem 206\Probleem 206\obj\Debug\Probleem 206.exe
+C:\Users\Sten Goes\Dropbox\Sten en Nancy\Euler-Project\Probleem 206\C#\Probleem 206\Probleem 206\obj\Debug\Probleem 206.pdb
