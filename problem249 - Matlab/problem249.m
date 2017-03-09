@@ -1,37 +1,54 @@
-clc;
-close all;
 clear all;
+clc;
+
 
 target = 5000;
-%select all primes
-all_primes = primes(target);
-N = length(all_primes);
 
-%test
-% combinations1 = number_of_compositions_modulo(12, primes(20));  
-% for i = 1:length(combinations1)
-%     fprintf('M=%.2i \t possible: %i \n', (i-1), double(combinations1(i)));
-% end;
+% Create all primes below target
+numbers = primes(target);
 
-combinations = number_of_compositions_modulo(sum(all_primes), all_primes);
+% Dynamic programming
+M = length(numbers);
+N = sum(numbers)+1;
 
-numbers = 0:sum(all_primes);
-prime_sums = isprime(numbers);
-prime_sums_combinations = combinations(prime_sums);
-totalForMod = 0;
-totalFor = 0;
-for i=1:length(prime_sums_combinations)
-    totalFor = totalFor + prime_sums_combinations(i);
-    totalForMod = mod( (mod(totalForMod, 10^16) + mod(prime_sums_combinations(i), 10^16)), 10^16);
+% Init memoization array
+A = zeros(2, N, 'uint64');
+A(1, 1) = 1;
+
+stop = 1;
+for j=1:M
+    
+    % Print progress
+    if mod(j, 66) == 0
+        fprintf('%d / %d \n', j, M);
+    end
+    
+    for i=1:(stop+numbers(j))
+        if i-numbers(j) > 0
+            A(2, i) = mod(A(1, i) + A(1, i-numbers(j)), 10^16);
+        else
+            A(2, i) = A(1, i);
+        end
+    end;
+    
+    % Copy 2nd row to first and empty the 2nd row
+    A(1, :) = A(2, :);
+    A(2, :) = 0;
+    
+    % Store the stop index
+    stop = stop+numbers(j);
+end;
+subsets = A(1, :);
+
+% Select the subsets of which the sum is again prime
+valid_subsets = subsets(isprime(0:sum(numbers)));
+
+% Sum the number of those subsets modulo 10^16
+answer = 0;
+for i=1:length(valid_subsets)
+    answer = mod(answer + valid_subsets(i), 10^16);
 end;
 
-
-%alternative
-totalSum = sum(mod(combinations(isprime(numbers)), 10^16));
-totalSumMod = mod(totalSum, 10^16);
-
-fprintf('for TOT # subsets = %.16i \n', totalFor);
-fprintf('for MOD # subsets = %.16i \n', totalForMod);
-fprintf('sum TOT # subsets = %.16i \n', totalSum);
-fprintf('sum MOD # subsets = %.16i \n', totalSumMod);
-
+% Print the answer
+fprintf('The answer is: %d \n', answer);
+answer
